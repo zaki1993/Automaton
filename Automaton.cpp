@@ -6,6 +6,7 @@ Automaton::Automaton() {
 	numEndStates = 0;
 	endStates = new int[0];
 }
+
 Automaton::Automaton(int num, int st, int mx[100][26], int*end, int n) {
 	number = num;
 	start = st;
@@ -53,6 +54,7 @@ Automaton&::Automaton:: operator=(const Automaton& other) {
 	}
 	return *this;
 }
+
 void Automaton::saveAutomaton(std::ofstream& out)const {
 	out << number << std::endl; //put number of the states
 	out << start << std::endl; //put the start state
@@ -122,6 +124,7 @@ void Automaton::readAutomaton(std::ifstream& in) {
 	std::cout << "Successfully read..!" << std::endl;
 	in.close();
 }
+
 void Automaton::print() const {
 
 	for (int i = 0; i < number; i++) {
@@ -131,6 +134,7 @@ void Automaton::print() const {
 		std::cout << std::endl;
 	}
 }
+
 bool Automaton::checkWord(char*word, std::ofstream& out) {
 	bool canContinue = false;
 	int get = 0;
