@@ -2,8 +2,10 @@
 #include<fstream>
 #include<iostream>
 #include<string>
+
 #ifndef AUTOMATON_H
 #define AUTOMATON_H
+
 class Automaton
 {
 private:
